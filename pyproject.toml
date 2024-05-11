@@ -1,25 +1,24 @@
+[tool.dagster]
+module_name = "pipeline"
+
 [tool.poetry]
-name = "seto-data-backend"
+name = "seto-data-pipeline"
 version = "0.1.0"
 description = ""
 authors = ["CaffeineDuck <hello@samrid.me>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.1"
-dagster = "^1.7.5"
-dagster-webserver = "^1.7.5"
+python = ">=3.9,<3.13"
 httpx = "^0.27.0"
-bs4 = "^0.0.2"
-
-[tool.ruff]
-line-length = 88
+pandas = "^2.2.2"
+openpyxl = "^3.1.2"
+pandera = "^0.19.2"
+dagster = "^1.7.5"
 
 [tool.ruff.lint]
 select = ["I001"]
 
-[tool.dagster]
-module_name = "seto-data-backend"
 
 [build-system]
 requires = ["poetry-core"]
